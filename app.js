@@ -1,10 +1,2 @@
-let alertString;
-
-alertString = addString("web");
-
-alert(alertString);
-
-function addString(strA){
-  let addStr = "hello " + strA;
-  return addStr;
-}
+let promptStr = prompt('何か文字を入力してください');
+alert(promptStr)
