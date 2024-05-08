@@ -5,6 +5,6 @@ alertString = addString("web");
 alert(alertString);
 
 function addString(strA){
-    let addstr = "hello " + strA;
-    return addstr;
+  let addStr = "hello " + strA;
+  return addStr;
 }
