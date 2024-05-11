@@ -18,7 +18,7 @@ function getJShand(){
   return hand_name;
 }
 
-function winLost(user, js){
+function winLose(user, js){
   let winLoseStr;
   
   if(user == "グー"){
