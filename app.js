@@ -1,11 +1,23 @@
-function halfIncriaseaddSum(startValue, operations) {
-    let currentValue = startValue;
-    for (let i = 0; i < operations; i++) {
-        currentValue += Math.floor(currentValue / 2);
+function isThreeOfAKind(num) {
+    const numStr = num.toString();
+    for (let i = 0; i < numStr.length - 2; i++) {
+        if (numStr[i] === numStr[i + 1] && numStr[i + 1] === numStr[i + 2]) {
+            return true;
+        }
     }
-    return currentValue;
+    return false;
 }
-const initialValue = 102;
-const times =60;
-const result =halfIncriaseaddSum(initialValue, times);
-console.log(result);
+
+function sumThreeOfAKindNumbers(max) {
+    let totalSum = 0;
+    for (let i = 1; i <= max; i++) {
+        if (isThreeOfAKind(i)) {
+            totalSum += i;
+        }
+    }
+    return totalSum;
+}
+
+const maxNumber = 200000;
+const result = sumThreeOfAKindNumbers(maxNumber);
+console.log(`The sum of all 'three of a kind' numbers up to ${maxNumber} is ${result}.`);
